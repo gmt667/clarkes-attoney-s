@@ -5,6 +5,7 @@ import {
   clients,
   contactDetails,
   practiceAreas,
+  supportTeam,
   values,
 } from "./site-content";
 
@@ -12,6 +13,7 @@ type CmsContent = {
   values: typeof values;
   practiceAreas: typeof practiceAreas;
   attorneys: typeof attorneys;
+  supportTeam: typeof supportTeam;
   blogPosts: typeof blogPosts;
   clients: typeof clients;
   contactDetails: typeof contactDetails;
@@ -21,6 +23,7 @@ type SanityContent = {
   values?: typeof values;
   practiceAreas?: typeof practiceAreas;
   attorneys?: typeof attorneys;
+  supportTeam?: typeof supportTeam;
   blogPosts?: Array<
     Omit<(typeof blogPosts)[number], "slug"> & {
       slug?: { current?: string } | string;
@@ -87,6 +90,7 @@ export const getCmsContent = cache(async (): Promise<CmsContent> => {
       "values": *[_type == "siteValue"] | order(order asc){title, text},
       "practiceAreas": *[_type == "practiceArea"] | order(order asc){title, description, items},
       "attorneys": *[_type == "attorney"] | order(order asc){name, role, bio, email},
+      "supportTeam": *[_type == "supportTeamMember"] | order(order asc){name, position, description, email},
       "blogPosts": *[_type == "post"] | order(publishedAt desc){slug, title, excerpt, publishedAt, category},
       "clients": *[_type == "client"] | order(order asc){name},
       "contactDetails": *[_type == "contactDetails"][0]{phoneNumbers, email, poBox, location}
@@ -120,11 +124,22 @@ export const getCmsContent = cache(async (): Promise<CmsContent> => {
         };
       })
       .filter(Boolean);
+    const mappedSupportTeam = (sanityContent.supportTeam ?? []).map((member) => {
+      const fallback = supportTeam.find(
+        (item) => item.name.toLowerCase() === member.name.toLowerCase()
+      );
+
+      return {
+        ...member,
+        email: member.email ?? fallback?.email,
+      };
+    });
 
     return {
       values: sanityContent.values ?? values,
       practiceAreas: sanityContent.practiceAreas ?? practiceAreas,
       attorneys: sanityContent.attorneys ?? attorneys,
+      supportTeam: mappedSupportTeam.length ? mappedSupportTeam : supportTeam,
       blogPosts: mappedBlogPosts.length ? mappedBlogPosts : blogPosts,
       clients: mappedClients.length ? (mappedClients as typeof clients) : clients,
       contactDetails: {
@@ -138,6 +153,7 @@ export const getCmsContent = cache(async (): Promise<CmsContent> => {
     values,
     practiceAreas,
     attorneys,
+    supportTeam,
     blogPosts,
     clients,
     contactDetails,

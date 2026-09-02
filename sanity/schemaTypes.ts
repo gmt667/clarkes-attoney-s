@@ -87,6 +87,43 @@ export const schemaTypes = [
     ],
   }),
   defineType({
+    name: "supportTeamMember",
+    title: "Professional Support Team Member",
+    type: "document",
+    fields: [
+      defineField({
+        name: "name",
+        title: "Full Name",
+        type: "string",
+        validation: (Rule) => Rule.required().max(100),
+      }),
+      defineField({
+        name: "position",
+        title: "Official Position",
+        type: "string",
+        validation: (Rule) => Rule.required().max(100),
+      }),
+      defineField({
+        name: "description",
+        title: "Description",
+        type: "text",
+        rows: 3,
+        validation: (Rule) => Rule.required().max(360),
+      }),
+      defineField({
+        name: "email",
+        title: "Company Email",
+        type: "string",
+        validation: (Rule) => Rule.required().email(),
+      }),
+      defineField({
+        name: "order",
+        type: "number",
+        hidden: true,
+      }),
+    ],
+  }),
+  defineType({
     name: "post",
     title: "Blog Post",
     type: "document",
@@ -184,4 +221,3 @@ export const schemaTypes = [
     ],
   }),
 ];
-

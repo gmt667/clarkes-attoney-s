@@ -1485,6 +1485,97 @@ p {
   color: var(--gold);
 }
 
+.support-team-section {
+  padding-top: clamp(52px, 7vw, 86px);
+}
+
+.support-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2.4vw, 24px);
+  align-items: stretch;
+}
+
+.support-team-grid-item {
+  display: flex;
+  min-width: 0;
+}
+
+.support-team-card {
+  position: relative;
+  display: grid;
+  width: 100%;
+  min-height: 230px;
+  padding: clamp(22px, 3vw, 30px);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  background: var(--panel);
+  box-shadow: var(--shadow-sm);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.support-team-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(178, 138, 56, 0.35);
+  box-shadow: var(--shadow-md);
+}
+
+.support-team-initials {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 22px;
+  border-radius: 24px;
+  background: var(--gold-soft);
+  color: var(--navy);
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.support-team-icon {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--gold);
+  background: var(--bg-soft);
+}
+
+.support-team-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.support-team-card h3 {
+  margin-bottom: 8px;
+}
+
+.support-team-position {
+  margin-bottom: 10px;
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+
+.support-team-description {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.support-team-email-link {
+  margin-top: 18px;
+}
+
 .route-card-link {
   display: inline-flex;
   align-items: center;
@@ -2063,6 +2154,10 @@ p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .support-team-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .three-up,
   .values-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2176,6 +2271,10 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .support-team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .three-up,
   .values-grid {
     grid-template-columns: 1fr;
@@ -2284,6 +2383,7 @@ p {
   .content-grid,
   .practice-page-grid,
   .attorneys-grid,
+  .support-team-grid,
   .blog-grid,
   .clients-grid,
   .home-trust-strip,
@@ -2523,6 +2623,7 @@ p {
 [data-theme="dark"] h3,
 [data-theme="dark"] h4,
 [data-theme="dark"] .attorney-name,
+[data-theme="dark"] .support-team-card h3,
 [data-theme="dark"] .value-label,
 [data-theme="dark"] .client-logo-label,
 [data-theme="dark"] .gallery-card-caption h3 {
@@ -2532,6 +2633,7 @@ p {
 [data-theme="dark"] p,
 [data-theme="dark"] .about-lead,
 [data-theme="dark"] .attorney-card-bio,
+[data-theme="dark"] .support-team-card p,
 [data-theme="dark"] .bullet-list li,
 [data-theme="dark"] .client-logo-desc,
 [data-theme="dark"] .gallery-feature-copy p:not(.page-kicker),
@@ -2553,6 +2655,7 @@ p {
 [data-theme="dark"] .contact-card,
 [data-theme="dark"] .detail-card,
 [data-theme="dark"] .attorney-detail-card,
+[data-theme="dark"] .support-team-card,
 [data-theme="dark"] .purpose-card,
 [data-theme="dark"] .value-card,
 [data-theme="dark"] .experience-highlight-card,
@@ -2689,7 +2792,9 @@ p {
 }
 
 [data-theme="dark"] .client-logo-badge,
-[data-theme="dark"] .attorney-avatar {
+[data-theme="dark"] .attorney-avatar,
+[data-theme="dark"] .support-team-initials,
+[data-theme="dark"] .support-team-icon {
   background: #07111f;
   color: #f4d28a;
 }

@@ -29,7 +29,7 @@ export default async function ExperiencePage() {
         copy="Clarkes Attorneys delivers practical legal solutions to corporations, institutions, state bodies, civil society organizations, and individuals."
         primaryHref="/contact"
         primaryLabel="Schedule a consultation"
-        secondaryHref="/attorneys"
+        secondaryHref="/our-team"
         secondaryLabel="Meet the team"
         stat={`${clients.length}+`}
         statLabel="Representative organizations and institutions served across multiple sectors."

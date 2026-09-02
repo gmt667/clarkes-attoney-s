@@ -273,9 +273,9 @@ export default function Home() {
               <span>Contact the firm</span>
               <ArrowRight size={18} className="button-icon-arrow" />
             </Link>
-            <Link className="button button-ghost" href="/attorneys">
+            <Link className="button button-ghost" href="/our-team">
               <Briefcase size={17} />
-              <span>Meet the attorneys</span>
+              <span>Meet our team</span>
             </Link>
           </div>
         </section>

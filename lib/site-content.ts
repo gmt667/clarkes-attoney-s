@@ -12,6 +12,13 @@ export type Attorney = {
   image?: string;
 };
 
+export type SupportTeamMember = {
+  name: string;
+  position: string;
+  description: string;
+  email?: string;
+};
+
 export type BlogPost = {
   slug: string;
   title: string;
@@ -142,6 +149,27 @@ export const attorneys: Attorney[] = [
     bio: "Prince Stevens Thengo serves as Legal Consultant at Clarkes Attorneys, bringing specialist expertise in policy analysis, commercial law, and legal advisory services. He supports the firm's work in legal research, documentation, legal opinion drafting, and strategic consultancy, with a particular focus on complex regulatory and policy matters. Prince contributes to the firm's advisory engagements with public sector institutions, civil society organisations, and commercial clients, helping to analyse legislative frameworks and develop practical compliance strategies. His consultancy work combines rigorous analysis with pragmatic guidance, making him a valuable resource for clients facing regulatory change or navigating unfamiliar legal terrain.",
     email: "stevens@clarkesattorneys.mw",
     image: "/images/attorneys/prince-stevens-thengo.jpg",
+  },
+];
+
+export const supportTeam: SupportTeamMember[] = [
+  {
+    name: "Alice Kapindula",
+    position: "Administrator",
+    description: "Alice supports the firm's daily administrative operations, office coordination, client communication and records management. She helps maintain an organised and responsive working environment for both clients and the legal team.",
+    email: "alice@clarkesattorneys.mw",
+  },
+  {
+    name: "Bhaxter Saile",
+    position: "Process Server",
+    description: "Bhaxter supports the proper and timely delivery of legal documents to the relevant parties. He assists the firm with process serving, delivery coordination and accurate documentation of service activities.",
+    email: "bhaxter@clarkesattorneys.mw",
+  },
+  {
+    name: "Zitha Mpoola",
+    position: "Special Assistant",
+    description: "Zitha provides administrative and operational support to the firm. Zitha assists with scheduling, correspondence, document coordination and other responsibilities that help the legal team serve clients efficiently.",
+    email: "zitha@clarkesattorneys.mw",
   },
 ];
 
