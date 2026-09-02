@@ -2499,3 +2499,202 @@ p {
     min-height: 260px;
   }
 }
+
+/* Dark mode contrast refinement */
+[data-theme="dark"] {
+  --bg: #070d18;
+  --bg-soft: #0d1726;
+  --panel: #121f31;
+  --panel-warm: #162538;
+  --ink: #f5f7fb;
+  --ink-soft: #d7e0ec;
+  --muted: #b3c0d1;
+  --navy: #f4d28a;
+  --navy-2: #ffe1a3;
+  --blue: #7bc8ec;
+  --gold: #f0c979;
+  --gold-soft: #47351c;
+  --line: rgba(255, 255, 255, 0.14);
+  --line-strong: rgba(255, 255, 255, 0.24);
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] .attorney-name,
+[data-theme="dark"] .value-label,
+[data-theme="dark"] .client-logo-label,
+[data-theme="dark"] .gallery-card-caption h3 {
+  color: #fff8e8;
+}
+
+[data-theme="dark"] p,
+[data-theme="dark"] .about-lead,
+[data-theme="dark"] .attorney-card-bio,
+[data-theme="dark"] .bullet-list li,
+[data-theme="dark"] .client-logo-desc,
+[data-theme="dark"] .gallery-feature-copy p:not(.page-kicker),
+[data-theme="dark"] .blog-article-lead {
+  color: var(--ink-soft);
+}
+
+[data-theme="dark"] .page-kicker,
+[data-theme="dark"] .eyebrow,
+[data-theme="dark"] .detail-role,
+[data-theme="dark"] .gallery-card-caption span,
+[data-theme="dark"] .blog-category-tag {
+  color: #f4d28a;
+}
+
+[data-theme="dark"] .topbar,
+[data-theme="dark"] .mobile-dropdown,
+[data-theme="dark"] .contact-form,
+[data-theme="dark"] .contact-card,
+[data-theme="dark"] .detail-card,
+[data-theme="dark"] .attorney-detail-card,
+[data-theme="dark"] .purpose-card,
+[data-theme="dark"] .value-card,
+[data-theme="dark"] .experience-highlight-card,
+[data-theme="dark"] .client-logo-card,
+[data-theme="dark"] .blog-card,
+[data-theme="dark"] .gallery-card,
+[data-theme="dark"] .gallery-feature,
+[data-theme="dark"] .home-about-strip,
+[data-theme="dark"] .home-trust-strip,
+[data-theme="dark"] .home-cta,
+[data-theme="dark"] .inner-cta,
+[data-theme="dark"] .intro-card,
+[data-theme="dark"] .blog-article-header,
+[data-theme="dark"] .blog-article-body,
+[data-theme="dark"] .not-found-panel {
+  border-color: var(--line);
+  background: rgba(18, 31, 49, 0.94);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.34);
+}
+
+[data-theme="dark"] .page-hero {
+  border-color: var(--line);
+  background:
+    linear-gradient(135deg, rgba(18, 31, 49, 0.98), rgba(9, 19, 33, 0.92)),
+    radial-gradient(circle at 88% 20%, rgba(240, 201, 121, 0.12), transparent 20rem);
+}
+
+[data-theme="dark"] .page-hero-card,
+[data-theme="dark"] .highlight-stat-box {
+  background: #07111f;
+  color: #fff;
+}
+
+[data-theme="dark"] .page-hero-card p,
+[data-theme="dark"] .highlight-stat-label {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+[data-theme="dark"] .nav-link,
+[data-theme="dark"] .mobile-dropdown-link,
+[data-theme="dark"] .mobile-dropdown-contact,
+[data-theme="dark"] .contact-info-link,
+[data-theme="dark"] .attorney-email-link,
+[data-theme="dark"] .route-card-link {
+  color: var(--ink-soft);
+}
+
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link-active,
+[data-theme="dark"] .mobile-dropdown-link:hover,
+[data-theme="dark"] .mobile-dropdown-link-active,
+[data-theme="dark"] .contact-info-link:hover,
+[data-theme="dark"] .attorney-email-link:hover,
+[data-theme="dark"] .route-card-link:hover {
+  color: #f4d28a;
+}
+
+[data-theme="dark"] .nav-active-pill,
+[data-theme="dark"] .mobile-dropdown-link-active,
+[data-theme="dark"] .mobile-dropdown-link:hover,
+[data-theme="dark"] .mobile-dropdown-contact:hover {
+  background: rgba(240, 201, 121, 0.12);
+}
+
+[data-theme="dark"] .button-solid {
+  color: #07111f;
+  background: #f0c979;
+  box-shadow: 0 10px 24px rgba(240, 201, 121, 0.16);
+}
+
+[data-theme="dark"] .button-solid:hover {
+  background: #ffdda0;
+}
+
+[data-theme="dark"] .button-ghost,
+[data-theme="dark"] .theme-toggle,
+[data-theme="dark"] .menu-button,
+[data-theme="dark"] .attorney-email-link {
+  color: #f5f7fb;
+  border-color: var(--line-strong);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+[data-theme="dark"] .button-ghost:hover,
+[data-theme="dark"] .theme-toggle:hover,
+[data-theme="dark"] .menu-button:hover {
+  color: #f4d28a;
+  border-color: rgba(240, 201, 121, 0.44);
+  background: rgba(240, 201, 121, 0.1);
+}
+
+[data-theme="dark"] .stat-box,
+[data-theme="dark"] .about-proof-grid article,
+[data-theme="dark"] .contact-grid div,
+[data-theme="dark"] .client-image-container,
+[data-theme="dark"] .gallery-card-caption,
+[data-theme="dark"] .form-feedback {
+  border-color: var(--line);
+  background: rgba(7, 17, 31, 0.72);
+}
+
+[data-theme="dark"] .stat-box strong,
+[data-theme="dark"] .about-proof-grid strong,
+[data-theme="dark"] .contact-grid strong {
+  color: #fff8e8;
+}
+
+[data-theme="dark"] .stat-box span,
+[data-theme="dark"] .about-proof-grid span,
+[data-theme="dark"] .contact-grid span,
+[data-theme="dark"] .footer-about p,
+[data-theme="dark"] .footer-contact-list a,
+[data-theme="dark"] .footer-contact-list div,
+[data-theme="dark"] .footer-column p {
+  color: var(--muted);
+}
+
+[data-theme="dark"] .contact-form input,
+[data-theme="dark"] .contact-form textarea,
+[data-theme="dark"] .contact-form select {
+  border-color: var(--line-strong);
+  background: #07111f;
+  color: #f5f7fb;
+}
+
+[data-theme="dark"] .contact-form input::placeholder,
+[data-theme="dark"] .contact-form textarea::placeholder {
+  color: #8998ab;
+}
+
+[data-theme="dark"] .client-sector-tag {
+  background: rgba(240, 201, 121, 0.12);
+  color: #f4d28a;
+}
+
+[data-theme="dark"] .client-logo-badge,
+[data-theme="dark"] .attorney-avatar {
+  background: #07111f;
+  color: #f4d28a;
+}
+
+[data-theme="dark"] .footer {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: linear-gradient(135deg, #050b14 0%, #0b1829 55%, #101f33 100%);
+}
