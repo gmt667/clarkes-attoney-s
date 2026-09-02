@@ -2,6 +2,8 @@ import { contactDetails } from "./site-content";
 
 export const contactEmail = contactDetails.email;
 export const primaryPhoneHref = `tel:${contactDetails.phoneNumbers[0].replace(/\s+/g, "")}`;
+export const facebookHref = "https://web.facebook.com/clarkesattorneys";
+export const whatsappHref = `https://wa.me/${contactDetails.phoneNumbers[0].replace(/\D/g, "")}`;
 
 export const navLinks = [
   { label: "Home", href: "/" },

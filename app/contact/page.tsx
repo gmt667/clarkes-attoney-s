@@ -6,7 +6,8 @@ import { PageShell } from "@/components/page-shell";
 import { BrandLogo } from "@/components/site-header";
 import { ContactForm } from "@/components/contact-form";
 import { FadeIn } from "@/components/motion";
-import { contactEmail, primaryPhoneHref } from "@/lib/navigation";
+import { FacebookIcon, WhatsAppIcon } from "@/components/social-icons";
+import { contactEmail, facebookHref, primaryPhoneHref, whatsappHref } from "@/lib/navigation";
 import { contactDetails } from "@/lib/site-content";
 
 export const metadata: Metadata = {
@@ -70,6 +71,24 @@ export default function ContactPage() {
             <div className="contact-actions">
               <a className="button button-solid" href={`mailto:${contactEmail}`}>
                 <span>Email Direct</span>
+              </a>
+              <a
+                className="button button-whatsapp"
+                href={whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <WhatsAppIcon />
+                <span>WhatsApp</span>
+              </a>
+              <a
+                className="button button-facebook"
+                href={facebookHref}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FacebookIcon />
+                <span>Facebook</span>
               </a>
               <Link className="button button-ghost" href="/">
                 <span>Back to Home</span>

@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { BrandLogo } from "@/components/site-header";
-import { contactEmail, navLinks, primaryPhoneHref } from "@/lib/navigation";
+import { FacebookIcon, WhatsAppIcon } from "@/components/social-icons";
+import { contactEmail, facebookHref, navLinks, primaryPhoneHref, whatsappHref } from "@/lib/navigation";
 import { contactDetails } from "@/lib/site-content";
 
 export function SiteFooter() {
@@ -22,6 +23,26 @@ export function SiteFooter() {
             Legal support delivered with care, discretion, and practical
             judgment for individuals, businesses, and institutions.
           </p>
+          <div className="footer-socials" aria-label="Clarkes Attorneys social links">
+            <a
+              className="social-link social-link-facebook"
+              href={facebookHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Clarkes Attorneys on Facebook"
+            >
+              <FacebookIcon />
+            </a>
+            <a
+              className="social-link social-link-whatsapp"
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Contact Clarkes Attorneys on WhatsApp"
+            >
+              <WhatsAppIcon />
+            </a>
+          </div>
         </div>
 
         <div className="footer-column">

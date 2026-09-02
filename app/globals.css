@@ -553,6 +553,26 @@ button {
   box-shadow: 0 4px 14px rgba(9, 26, 47, 0.06);
 }
 
+.button-facebook,
+.button-whatsapp {
+  color: #fff;
+}
+
+.button-facebook {
+  background: #1877f2;
+}
+
+.button-whatsapp {
+  background: #25d366;
+}
+
+.button-facebook svg,
+.button-whatsapp svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
 .button-icon-arrow,
 .route-card-arrow,
 .practice-card-arrow {
@@ -1862,6 +1882,42 @@ p {
 
 .footer-logo {
   width: 54px;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  color: #fff;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.2);
+}
+
+.social-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+.social-link-facebook {
+  background: #1877f2;
+}
+
+.social-link-whatsapp {
+  background: #25d366;
 }
 
 .footer h3,
