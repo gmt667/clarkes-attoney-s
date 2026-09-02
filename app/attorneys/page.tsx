@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, BriefcaseBusiness, Mail, Scale } from "lucide-react";
 import { getCmsContent } from "@/lib/cms";
@@ -35,11 +36,24 @@ export default async function AttorneysPage() {
           {attorneys.map((attorney, index) => (
             <FadeInStaggerItem key={attorney.name} className="attorney-grid-item">
               <article className="detail-card attorney-detail-card">
-                <div className="attorney-card-header">
-                  <div className="attorney-avatar" aria-hidden="true">
-                    <Scale />
-                    <span>{String(index + 1).padStart(2, "0")}</span>
+                {attorney.image ? (
+                  <div className="attorney-photo-wrap">
+                    <Image
+                      src={attorney.image}
+                      alt={`${attorney.name}, ${attorney.role}`}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                      className="attorney-photo"
+                    />
                   </div>
+                ) : null}
+                <div className="attorney-card-header">
+                  {!attorney.image ? (
+                    <div className="attorney-avatar" aria-hidden="true">
+                      <Scale />
+                      <span>{String(index + 1).padStart(2, "0")}</span>
+                    </div>
+                  ) : null}
                   <div>
                     <h2 className="attorney-name">{attorney.name}</h2>
                     <p className="detail-role">{attorney.role}</p>

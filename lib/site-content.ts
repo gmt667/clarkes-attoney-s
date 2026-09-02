@@ -9,6 +9,7 @@ export type Attorney = {
   role: string;
   bio: string;
   email?: string;
+  image?: string;
 };
 
 export type BlogPost = {
@@ -18,6 +19,13 @@ export type BlogPost = {
   content: string;
   publishedAt: string;
   category: string;
+};
+
+export type GalleryImage = {
+  title: string;
+  category: string;
+  image: string;
+  orientation: "portrait" | "landscape" | "square";
 };
 
 export type ExperienceClient =
@@ -115,22 +123,88 @@ export const practiceAreas: PracticeArea[] = [
 
 export const attorneys: Attorney[] = [
   {
-    name: "Geoffrey Taumbe",
+    name: "Geoffrey Mustafa Taumbe",
     role: "Managing Partner",
-    bio: "Geoffrey Taumbe is the founding Managing Partner of Clarkes Attorneys. He leads the firm's litigation and corporate practice with a broad range of experience spanning civil litigation, commercial law, corporate advisory, property law, dispute resolution, and legal consultancy. Geoffrey has appeared before the High Court and subordinate courts in a variety of complex commercial and civil matters. He advises corporate clients, institutions, and individuals on governance, contractual arrangements, regulatory compliance, and strategic legal matters. His approach is grounded in thorough preparation, clear communication, and a commitment to achieving practical outcomes for clients across all sectors the firm serves.",
+    bio: "Geoffrey Mustafa Taumbe is the founding Managing Partner of Clarkes Attorneys. He leads the firm's litigation and corporate practice with a broad range of experience spanning civil litigation, commercial law, corporate advisory, property law, dispute resolution, and legal consultancy. Geoffrey has appeared before the High Court and subordinate courts in a variety of complex commercial and civil matters. He advises corporate clients, institutions, and individuals on governance, contractual arrangements, regulatory compliance, and strategic legal matters. His approach is grounded in thorough preparation, clear communication, and a commitment to achieving practical outcomes for clients across all sectors the firm serves.",
     email: "geoffrey@clarkesattorneys.mw",
+    image: "/images/attorneys/geoffrey-taumbe.jpg",
   },
   {
     name: "Kennedy Chiphaso",
     role: "Associate",
     bio: "Kennedy Chiphaso is an Associate at Clarkes Attorneys with hands-on experience in litigation, legal research, corporate advisory, and client representation. He has developed a strong foundation in drafting legal documents including contracts, opinions, pleadings, and correspondence, and he provides structured support in dispute resolution proceedings and pre-litigation negotiations. Kennedy works closely with the Managing Partner on commercial matters, assisting clients with documentation, regulatory filings, and advisory support. He is known for his methodical research approach and his ability to translate complex legal questions into clear, actionable guidance for clients in both the private and public sectors.",
-    email: "info@clarkesattorneys.mw",
+    email: "kennedy@clarkesattorneys.mw",
+    image: "/images/attorneys/kennedy-chiphaso.jpg",
   },
   {
     name: "Prince Stevens Thengo",
     role: "Legal Consultant",
     bio: "Prince Stevens Thengo serves as Legal Consultant at Clarkes Attorneys, bringing specialist expertise in policy analysis, commercial law, and legal advisory services. He supports the firm's work in legal research, documentation, legal opinion drafting, and strategic consultancy, with a particular focus on complex regulatory and policy matters. Prince contributes to the firm's advisory engagements with public sector institutions, civil society organisations, and commercial clients, helping to analyse legislative frameworks and develop practical compliance strategies. His consultancy work combines rigorous analysis with pragmatic guidance, making him a valuable resource for clients facing regulatory change or navigating unfamiliar legal terrain.",
-    email: "info@clarkesattorneys.mw",
+    email: "stevens@clarkesattorneys.mw",
+    image: "/images/attorneys/prince-stevens-thengo.jpg",
+  },
+];
+
+export const galleryImages: GalleryImage[] = [
+  {
+    title: "Clarkes Attorneys brand identity",
+    category: "Firm Identity",
+    image: "/images/gallery/clarkes-attorneys-logo-cover.jpg",
+    orientation: "landscape",
+  },
+  {
+    title: "Counsel at court",
+    category: "Practice",
+    image: "/images/gallery/counsel-at-court.jpg",
+    orientation: "landscape",
+  },
+  {
+    title: "Counsel in advocacy dress",
+    category: "Practice",
+    image: "/images/gallery/counsel-in-advocacy-dress.jpg",
+    orientation: "portrait",
+  },
+  {
+    title: "John Chilembwe Day message",
+    category: "Public Notice",
+    image: "/images/gallery/john-chilembwe-day.jpg",
+    orientation: "landscape",
+  },
+  {
+    title: "General notice",
+    category: "Public Notice",
+    image: "/images/gallery/general-notice-2023.jpg",
+    orientation: "square",
+  },
+  {
+    title: "New year message",
+    category: "Firm Notice",
+    image: "/images/gallery/new-year-message-2024.jpg",
+    orientation: "landscape",
+  },
+  {
+    title: "Process server vacancy notice",
+    category: "Careers",
+    image: "/images/gallery/process-server-vacancy-2024-september.jpg",
+    orientation: "portrait",
+  },
+  {
+    title: "Recruitment notice",
+    category: "Careers",
+    image: "/images/gallery/process-server-vacancy-2024-january.jpg",
+    orientation: "portrait",
+  },
+  {
+    title: "Condolence message",
+    category: "Public Notice",
+    image: "/images/gallery/condolence-message.jpg",
+    orientation: "landscape",
+  },
+  {
+    title: "Malawi Law Society new year message",
+    category: "Professional Community",
+    image: "/images/gallery/malawi-law-society-new-year.jpg",
+    orientation: "portrait",
   },
 ];
 

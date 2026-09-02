@@ -11,6 +11,7 @@ export const navLinks = [
   { label: "Practice", href: "/practice-areas" },
   { label: "Attorneys", href: "/attorneys" },
   { label: "Experience", href: "/experience" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
