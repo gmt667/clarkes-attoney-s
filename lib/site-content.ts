@@ -159,6 +159,24 @@ export const galleryImages: GalleryImage[] = [
     orientation: "landscape",
   },
   {
+    title: "Prince Stevens Thengo portrait",
+    category: "Attorney Profile",
+    image: "/images/gallery/prince-stevens-thengo-portrait.jpg",
+    orientation: "portrait",
+  },
+  {
+    title: "Kennedy Chiphaso court portrait",
+    category: "Attorney Profile",
+    image: "/images/gallery/kennedy-chiphaso-court-portrait.jpg",
+    orientation: "portrait",
+  },
+  {
+    title: "Kennedy Chiphaso advocacy portrait",
+    category: "Attorney Profile",
+    image: "/images/gallery/kennedy-chiphaso-advocacy-portrait.jpg",
+    orientation: "portrait",
+  },
+  {
     title: "Counsel in advocacy dress",
     category: "Practice",
     image: "/images/gallery/counsel-in-advocacy-dress.jpg",
