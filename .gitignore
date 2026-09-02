@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.*.local
+
+# Scratch and debug files
+tmp/
+*.log
+
+# Operating system and editor files
+.DS_Store

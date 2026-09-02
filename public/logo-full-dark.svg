@@ -1,0 +1,23 @@
+<svg width="1200" height="320" viewBox="0 0 1200 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Clarkes Attorneys logo">
+  <g transform="translate(58 18)">
+    <g stroke="#E0A35E" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M96 98H284" stroke-width="10"/>
+      <path d="M190 98V248" stroke-width="10"/>
+      <path d="M136 98L110 204C110 216.134 132.91 226 161 226C189.09 226 212 216.134 212 204L186 98" stroke-width="10"/>
+      <path d="M244 98L218 204C218 216.134 240.91 226 269 226C297.09 226 320 216.134 320 204L294 98" transform="translate(-42 0)" stroke-width="10"/>
+      <path d="M190 62L228 100L190 138L152 100L190 62Z" stroke-width="10"/>
+      <path d="M132 78L112 98" stroke-width="10"/>
+      <path d="M248 78L268 98" stroke-width="10"/>
+      <path d="M190 138V240" stroke-width="10"/>
+      <path d="M190 240L170 206H210L190 240Z" fill="#E0A35E" stroke="#E0A35E" stroke-width="10"/>
+      <path d="M116 226C142 252 166 264 190 264C214 264 238 252 264 226" stroke-width="10"/>
+      <circle cx="112" cy="98" r="10" stroke-width="10"/>
+      <circle cx="268" cy="98" r="10" stroke-width="10"/>
+    </g>
+  </g>
+  <g transform="translate(390 86)">
+    <text x="0" y="72" fill="#FFFFFF" font-family="Georgia, 'Times New Roman', serif" font-size="94" letter-spacing="7">CLARKES</text>
+    <path d="M179 88C205 118 247 118 273 88" stroke="#E0A35E" stroke-width="7" stroke-linecap="round"/>
+    <text x="10" y="132" fill="#E7E9EE" font-family="'Segoe UI', Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="11">ATTORNEYS</text>
+  </g>
+</svg>
