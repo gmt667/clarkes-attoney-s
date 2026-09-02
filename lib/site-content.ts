@@ -159,6 +159,12 @@ export const galleryImages: GalleryImage[] = [
     orientation: "landscape",
   },
   {
+    title: "Geoffrey Mustafa Taumbe office portrait",
+    category: "Attorney Profile",
+    image: "/images/gallery/geoffrey-mustafa-taumbe-office-portrait.jpg",
+    orientation: "square",
+  },
+  {
     title: "Prince Stevens Thengo portrait",
     category: "Attorney Profile",
     image: "/images/gallery/prince-stevens-thengo-portrait.jpg",
