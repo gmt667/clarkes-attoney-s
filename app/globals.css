@@ -1536,6 +1536,22 @@ p {
   font-weight: 700;
 }
 
+.support-team-photo-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 22px;
+  overflow: hidden;
+  border-radius: 22px;
+  background: var(--bg-soft);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.support-team-photo {
+  object-fit: cover;
+  object-position: center;
+}
+
 .support-team-icon {
   position: absolute;
   top: 22px;

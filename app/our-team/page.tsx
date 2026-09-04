@@ -111,9 +111,21 @@ export default async function OurTeamPage() {
           {supportTeam.map((member) => (
             <FadeInStaggerItem key={member.name} className="support-team-grid-item">
               <article className="support-team-card">
-                <div className="support-team-initials" aria-hidden="true">
-                  {getInitials(member.name)}
-                </div>
+                {member.image ? (
+                  <div className="support-team-photo-wrap">
+                    <Image
+                      src={member.image}
+                      alt={`${member.name}, ${member.position}`}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                      className="support-team-photo"
+                    />
+                  </div>
+                ) : (
+                  <div className="support-team-initials" aria-hidden="true">
+                    {getInitials(member.name)}
+                  </div>
+                )}
                 <div className="support-team-icon" aria-hidden="true">
                   <UserRoundCog />
                 </div>

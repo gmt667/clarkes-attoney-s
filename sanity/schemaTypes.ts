@@ -117,6 +117,12 @@ export const schemaTypes = [
         validation: (Rule) => Rule.required().email(),
       }),
       defineField({
+        name: "image",
+        title: "Profile Image Path",
+        type: "string",
+        description: "Use a verified local path such as /images/support-team/alice-kapindula.jpg.",
+      }),
+      defineField({
         name: "order",
         type: "number",
         hidden: true,

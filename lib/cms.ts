@@ -90,7 +90,7 @@ export const getCmsContent = cache(async (): Promise<CmsContent> => {
       "values": *[_type == "siteValue"] | order(order asc){title, text},
       "practiceAreas": *[_type == "practiceArea"] | order(order asc){title, description, items},
       "attorneys": *[_type == "attorney"] | order(order asc){name, role, bio, email},
-      "supportTeam": *[_type == "supportTeamMember"] | order(order asc){name, position, description, email},
+      "supportTeam": *[_type == "supportTeamMember"] | order(order asc){name, position, description, email, image},
       "blogPosts": *[_type == "post"] | order(publishedAt desc){slug, title, excerpt, publishedAt, category},
       "clients": *[_type == "client"] | order(order asc){name},
       "contactDetails": *[_type == "contactDetails"][0]{phoneNumbers, email, poBox, location}
@@ -132,6 +132,7 @@ export const getCmsContent = cache(async (): Promise<CmsContent> => {
       return {
         ...member,
         email: member.email ?? fallback?.email,
+        image: member.image ?? fallback?.image,
       };
     });
 

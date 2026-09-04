@@ -17,6 +17,7 @@ export type SupportTeamMember = {
   position: string;
   description: string;
   email?: string;
+  image?: string;
 };
 
 export type BlogPost = {
@@ -158,18 +159,21 @@ export const supportTeam: SupportTeamMember[] = [
     position: "Administrator",
     description: "Alice supports the firm's daily administrative operations, office coordination, client communication and records management. She helps maintain an organised and responsive working environment for both clients and the legal team.",
     email: "alice@clarkesattorneys.mw",
+    image: "/images/support-team/alice-kapindula.jpg",
   },
   {
     name: "Bhaxter Saile",
     position: "Process Server",
     description: "Bhaxter supports the proper and timely delivery of legal documents to the relevant parties. He assists the firm with process serving, delivery coordination and accurate documentation of service activities.",
     email: "bhaxter@clarkesattorneys.mw",
+    image: "/images/support-team/bhaxter-saile.jpg",
   },
   {
     name: "Zitha Mpoola",
     position: "Special Assistant",
     description: "Zitha provides administrative and operational support to the firm. Zitha assists with scheduling, correspondence, document coordination and other responsibilities that help the legal team serve clients efficiently.",
     email: "zitha@clarkesattorneys.mw",
+    image: "/images/support-team/zitha-mpoola.jpg",
   },
 ];
 
