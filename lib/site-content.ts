@@ -215,6 +215,24 @@ export const galleryImages: GalleryImage[] = [
     orientation: "portrait",
   },
   {
+    title: "Alice Kapindula profile",
+    category: "Professional Support Team",
+    image: "/images/gallery/alice-kapindula-profile.jpg",
+    orientation: "square",
+  },
+  {
+    title: "Zitha Mpoola profile",
+    category: "Professional Support Team",
+    image: "/images/gallery/zitha-mpoola-profile.jpg",
+    orientation: "square",
+  },
+  {
+    title: "Bhaxter Saile profile",
+    category: "Professional Support Team",
+    image: "/images/gallery/bhaxter-saile-profile.jpg",
+    orientation: "portrait",
+  },
+  {
     title: "Counsel in advocacy dress",
     category: "Practice",
     image: "/images/gallery/counsel-in-advocacy-dress.jpg",
