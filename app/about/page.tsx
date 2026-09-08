@@ -32,7 +32,6 @@ export default async function AboutPage() {
       <FadeIn duration={0.5}>
         <section className="intro-card about-intro-card">
           <div className="intro-visual about-intro-visual">
-            <div className="image-shade image-shade-soft" />
             <div className="intro-visual-inner">
               <Gavel className="intro-icon" />
               <span>Clarity. Strategy. Results.</span>

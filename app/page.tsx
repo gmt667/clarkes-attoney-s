@@ -131,7 +131,7 @@ export default function Home() {
             />
             <div className="image-shade" />
             <div className="image-caption">
-              <BrandLogo variant="full" tone="light" className="caption-logo" />
+              <BrandLogo variant="full" className="caption-logo" />
               <span className="caption-tag">Legal Practitioners</span>
             </div>
             <div className="hero-floating-pill">

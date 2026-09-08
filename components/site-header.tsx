@@ -13,33 +13,70 @@ import { useTheme } from "@/components/theme-provider";
 
 export function BrandLogo({
   variant,
-  tone = "light",
+  tone,
   className,
 }: {
   variant: "full" | "icon";
-  tone?: "light" | "dark";
+  tone?: "light" | "dark" | "auto";
   className?: string;
 }) {
-  const src =
-    variant === "full"
-      ? tone === "dark"
-        ? "/logo-full-dark.svg"
-        : "/logo-full.svg"
-      : "/logo-icon.svg";
-  const dims =
-    variant === "full"
-      ? { width: 360, height: 96 }
-      : { width: 56, height: 56 };
+  if (variant === "icon") {
+    return (
+      <Image
+        src="/logo-icon.svg"
+        alt="Clarkes Attorneys"
+        width={56}
+        height={56}
+        className={className}
+      />
+    );
+  }
+
+  if (tone === "light") {
+    return (
+      <Image
+        src="/logo-full.svg"
+        alt="Clarkes Attorneys"
+        width={360}
+        height={96}
+        className={className}
+        priority
+      />
+    );
+  }
+
+  if (tone === "dark") {
+    return (
+      <Image
+        src="/logo-full-dark.svg"
+        alt="Clarkes Attorneys"
+        width={360}
+        height={96}
+        className={className}
+        priority
+      />
+    );
+  }
 
   return (
-    <Image
-      src={src}
-      alt="Clarkes Attorneys"
-      width={dims.width}
-      height={dims.height}
-      className={className}
-      priority={variant === "full"}
-    />
+    <>
+      <Image
+        src="/logo-full.svg"
+        alt="Clarkes Attorneys"
+        width={360}
+        height={96}
+        className={`${className ? `${className} ` : ""}brand-logo-theme-light`}
+        priority
+      />
+      <Image
+        src="/logo-full-dark.svg"
+        alt="Clarkes Attorneys"
+        width={360}
+        height={96}
+        className={`${className ? `${className} ` : ""}brand-logo-theme-dark`}
+        priority
+      />
+    </>
   );
 }
 
