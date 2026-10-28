@@ -36,11 +36,6 @@ import { contactDetails, practiceAreas } from "@/lib/site-content";
 
 const socialLinks = [
   {
-    href: facebookHref,
-    label: "Clarkes Attorneys on Facebook",
-    icon: FacebookIcon,
-  },
-  {
     href: instagramHref,
     label: "Clarkes Attorneys on Instagram",
     icon: InstagramIcon,
@@ -56,6 +51,16 @@ const socialLinks = [
     icon: LinkedInIcon,
   },
   {
+    href: facebookHref,
+    label: "Clarkes Attorneys on Facebook",
+    icon: FacebookIcon,
+  },
+  {
+    href: whatsappHref,
+    label: "Clarkes Attorneys WhatsApp",
+    icon: WhatsAppIcon,
+  },
+  {
     href: tiktokHref,
     label: "Clarkes Attorneys on TikTok",
     icon: TikTokIcon,
@@ -65,27 +70,81 @@ const socialLinks = [
     label: "Clarkes Attorneys on YouTube",
     icon: YouTubeIcon,
   },
-  {
-    href: whatsappHref,
-    label: "Clarkes Attorneys WhatsApp",
-    icon: WhatsAppIcon,
-  },
 ];
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="footer-premium" aria-label="Clarkes Attorneys Footer">
-      {/* Decorative top gold gradient rule */}
-      <div className="footer-top-rule" aria-hidden="true" />
+    <footer className="footer-scenic" aria-label="Clarkes Attorneys Footer">
+      {/* ── Top Atmospheric Silhouette Scenic Header (Pinterest Inspired) ── */}
+      <div className="footer-scenic-backdrop" aria-hidden="true">
+        {/* SVG Atmospheric Landscape Silhouette */}
+        <svg
+          className="footer-scenic-svg"
+          viewBox="0 0 1440 220"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+        >
+          {/* Distant Rolling Hills Layer 1 */}
+          <path
+            d="M0 120 C 180 80, 340 130, 520 95 C 700 60, 880 110, 1080 75 C 1260 45, 1380 90, 1440 80 L 1440 220 L 0 220 Z"
+            fill="url(#hill-grad-1)"
+            opacity="0.45"
+          />
+          {/* Midground Hills Layer 2 */}
+          <path
+            d="M0 140 C 140 110, 300 155, 480 130 C 660 105, 840 145, 1020 120 C 1200 95, 1360 135, 1440 125 L 1440 220 L 0 220 Z"
+            fill="url(#hill-grad-2)"
+            opacity="0.65"
+          />
+          {/* Foreground Silhouette with Natural Tree & Ridgeline Layer 3 */}
+          <path
+            d="M0 168 C 120 150, 260 175, 420 158 C 580 140, 740 170, 920 152 C 1100 135, 1280 165, 1440 150 L 1440 220 L 0 220 Z"
+            fill="url(#hill-grad-3)"
+            opacity="0.95"
+          />
+          {/* Acacia / Dignified Trees Silhouette on the Ridge */}
+          <g opacity="0.8" fill="#040b15">
+            {/* Tree 1 (Right Knoll) */}
+            <path d="M1280 154 C 1280 142, 1278 135, 1279 122 C 1273 120, 1260 115, 1258 108 C 1264 107, 1274 110, 1279 114 C 1280 105, 1276 96, 1280 88 C 1285 95, 1284 105, 1283 115 C 1290 111, 1302 108, 1306 112 C 1298 116, 1288 120, 1284 124 C 1285 136, 1286 145, 1287 154 Z" />
+            <ellipse cx="1282" cy="85" rx="36" ry="14" />
+            <ellipse cx="1260" cy="106" rx="26" ry="10" />
+            <ellipse cx="1302" cy="110" rx="24" ry="9" />
+            {/* Tree 2 (Left Distance) */}
+            <path d="M160 162 C 160 152, 159 146, 160 138 C 156 136, 148 132, 146 128 C 151 127, 157 129, 160 132 C 161 126, 158 120, 161 114 C 164 119, 163 126, 162 133 C 166 130, 174 128, 177 130 C 172 133, 165 136, 163 139 C 163 148, 164 155, 165 162 Z" />
+            <ellipse cx="161" cy="112" rx="24" ry="10" />
+            <ellipse cx="147" cy="127" rx="18" ry="7" />
+            <ellipse cx="174" cy="130" rx="16" ry="6" />
+          </g>
+          {/* Gradients */}
+          <defs>
+            <linearGradient id="hill-grad-1" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#14324f" stopOpacity="0.4" />
+              <stop offset="100%" stopColor="#081829" stopOpacity="0.9" />
+            </linearGradient>
+            <linearGradient id="hill-grad-2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#0c2339" stopOpacity="0.6" />
+              <stop offset="100%" stopColor="#051220" stopOpacity="1" />
+            </linearGradient>
+            <linearGradient id="hill-grad-3" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#07192b" stopOpacity="0.85" />
+              <stop offset="100%" stopColor="#040b15" stopOpacity="1" />
+            </linearGradient>
+          </defs>
+        </svg>
 
-      {/* Pre-footer Consultation Banner */}
-      <div className="footer-chambers-banner">
-        <div className="footer-chambers-copy">
+        {/* Ambient Top Glow Line */}
+        <div className="footer-scenic-rim" />
+      </div>
+
+      {/* ── Pre-footer Chambers Consultation Action Banner ── */}
+      <div className="footer-scenic-banner">
+        <div className="footer-scenic-banner-copy">
           <div className="footer-badge-pill">
             <Scale size={14} className="footer-pill-icon" />
-            <span>Chambers &amp; Legal Consultations</span>
+            <span>Senior Legal Counsel &amp; Court Advocacy</span>
           </div>
           <h2>Need sound legal counsel or experienced court representation?</h2>
           <p>
@@ -94,7 +153,7 @@ export function SiteFooter() {
           </p>
         </div>
 
-        <div className="footer-chambers-actions">
+        <div className="footer-scenic-banner-actions">
           <Link href="/contact" className="footer-action-btn footer-btn-primary">
             <span>Schedule a Consultation</span>
             <ArrowUpRight size={16} />
@@ -106,13 +165,10 @@ export function SiteFooter() {
         </div>
       </div>
 
-      {/* Divider line */}
-      <div className="footer-divider-line" aria-hidden="true" />
-
-      {/* Main 4-Column Architectural Grid */}
-      <div className="footer-grid-wrap">
-        {/* Column 1: Firm Crest & Authority */}
-        <div className="footer-col footer-col-brand">
+      {/* ── Main Multi-Column Grid with Vertical Hairline Dividers (Pinterest Design) ── */}
+      <div className="footer-scenic-columns">
+        {/* Column 1: Brand Authority & Seal */}
+        <div className="footer-scenic-col footer-scenic-col-brand">
           <Link href="/" className="footer-brand-lockup" aria-label="Clarkes Attorneys">
             <BrandLogo variant="icon" className="footer-crest" />
             <div className="footer-brand-headings">
@@ -122,20 +178,20 @@ export function SiteFooter() {
           </Link>
 
           <p className="footer-brand-desc">
-            A client-centred legal practice founded in 2017. We deliver clear, principled, and
-            effective legal representation across commercial transactions, contentious disputes,
-            and regulatory proceedings.
+            A client-centred legal practice founded in 2017. Delivering principled advocacy,
+            transactional counsel, and practical problem-solving across civil, commercial, and
+            administrative jurisdictions.
           </p>
 
           <div className="footer-regulatory-box">
-            <ShieldCheck size={18} className="footer-reg-icon" />
+            <ShieldCheck size={17} className="footer-reg-icon" />
             <div className="footer-reg-text">
               <strong>Regulated Legal Practitioners</strong>
-              <span>Duly admitted before the High Court of Malawi &amp; Subordinate Courts</span>
+              <span>Admitted before High Court of Malawi &amp; Subordinate Courts</span>
             </div>
           </div>
 
-          {/* Social Cluster — all 7 platforms */}
+          {/* Social Media Cluster */}
           <div className="footer-social-cluster" aria-label="Connect with Clarkes Attorneys">
             {socialLinks.map(({ href, label, icon: Icon }) => (
               <a
@@ -152,17 +208,19 @@ export function SiteFooter() {
           </div>
         </div>
 
-        {/* Column 2: Core Practice Areas */}
-        <div className="footer-col footer-col-practice">
-          <div className="footer-col-header">
-            <Scale size={16} className="footer-header-icon" />
-            <h3>Practice Areas</h3>
+        {/* Vertical Divider */}
+        <div className="footer-col-divider" aria-hidden="true" />
+
+        {/* Column 2: Practice Disciplines (2 sub-columns of links like Pinterest ref) */}
+        <div className="footer-scenic-col footer-scenic-col-practice">
+          <div className="footer-scenic-heading">
+            <span>PRACTICE DISCIPLINES</span>
           </div>
-          <ul className="footer-link-list">
+          <ul className="footer-scenic-links">
             {practiceAreas.map((area) => (
               <li key={area.title}>
-                <Link href="/practice-areas" className="footer-nav-link">
-                  <span className="footer-link-bullet" aria-hidden="true" />
+                <Link href="/practice-areas" className="footer-scenic-link">
+                  <span className="footer-scenic-bullet" />
                   <span>{area.title}</span>
                 </Link>
               </li>
@@ -170,17 +228,19 @@ export function SiteFooter() {
           </ul>
         </div>
 
-        {/* Column 3: Firm Navigation */}
-        <div className="footer-col footer-col-nav">
-          <div className="footer-col-header">
-            <Compass size={16} className="footer-header-icon" />
-            <h3>The Firm</h3>
+        {/* Vertical Divider */}
+        <div className="footer-col-divider" aria-hidden="true" />
+
+        {/* Column 3: The Firm Navigation */}
+        <div className="footer-scenic-col footer-scenic-col-firm">
+          <div className="footer-scenic-heading">
+            <span>THE FIRM</span>
           </div>
-          <ul className="footer-link-list">
+          <ul className="footer-scenic-links">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="footer-nav-link">
-                  <span className="footer-link-bullet" aria-hidden="true" />
+                <Link href={link.href} className="footer-scenic-link">
+                  <span className="footer-scenic-bullet" />
                   <span>{link.label}</span>
                 </Link>
               </li>
@@ -188,11 +248,13 @@ export function SiteFooter() {
           </ul>
         </div>
 
-        {/* Column 4: Chambers & Direct Contact */}
-        <div className="footer-col footer-col-chambers">
-          <div className="footer-col-header">
-            <MapPin size={16} className="footer-header-icon" />
-            <h3>Lilongwe Chambers</h3>
+        {/* Vertical Divider */}
+        <div className="footer-col-divider" aria-hidden="true" />
+
+        {/* Column 4: Lilongwe Chambers Location & Hours */}
+        <div className="footer-scenic-col footer-scenic-col-chambers">
+          <div className="footer-scenic-heading">
+            <span>LILONGWE CHAMBERS</span>
           </div>
 
           <div className="footer-contact-stack">
@@ -232,15 +294,15 @@ export function SiteFooter() {
               <div>
                 <strong>Chambers Hours</strong>
                 <span>Monday – Friday: 08:00 – 17:00 (CAT)</span>
-                <span className="footer-entry-sub">Appointments by arrangement</span>
+                <span className="footer-entry-sub">Consultations by appointment</span>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom Bar: Legal, Compliance, & Copyright */}
-      <div className="footer-bottom-bar">
+      {/* ── Sub-Footer Bottom Bar ── */}
+      <div className="footer-scenic-bottom">
         <div className="footer-bottom-left">
           <span>&copy; {year} Clarkes Attorneys. All rights reserved.</span>
           <span className="footer-bottom-pipe">|</span>

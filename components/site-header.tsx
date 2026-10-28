@@ -133,9 +133,9 @@ export function SiteHeader() {
   const menuRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
 
-  // Detect scroll for elevated navbar
+  // Detect scroll for elevated navbar: transparent at top, translucent immediately upon scrolling
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -184,7 +184,7 @@ export function SiteHeader() {
           <BrandLogo variant="icon" className="brand-logo brand-logo-icon" />
         </Link>
 
-        {/* Desktop navigation */}
+        {/* Desktop navigation - clean without clutter */}
         <nav className="nav-desktop" aria-label="Main navigation">
           {navLinks.map((item) => {
             const active = pathname === item.href;
@@ -210,24 +210,6 @@ export function SiteHeader() {
               </Link>
             );
           })}
-          <div className="nav-contact" aria-label="Contact shortcuts">
-            <a
-              className="nav-contact-link nav-contact-call"
-              href={primaryPhoneHref}
-              aria-label="Call Clarkes Attorneys"
-              title="Call firm"
-            >
-              <Phone size={15} />
-            </a>
-            <a
-              className="nav-contact-link nav-contact-email"
-              href={`mailto:${contactEmail}`}
-              aria-label="Email Clarkes Attorneys"
-              title="Email firm"
-            >
-              <Mail size={15} />
-            </a>
-          </div>
         </nav>
 
         {/* Right controls: consultation pill + theme toggle + mobile menu button */}

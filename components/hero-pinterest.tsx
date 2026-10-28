@@ -112,7 +112,7 @@ export function HeroPinterest() {
         <div className="tn-hero-visual-center">
           <div className="tn-statue-wrap">
             <Image
-              src="/images/lady-justice.jpg"
+              src="/images/lady-justice.png"
               alt="Lady Justice statue holding the scales of justice"
               fill
               priority

@@ -135,30 +135,45 @@ button {
   width: var(--shell);
   min-height: 64px;
   padding: 8px 12px 8px 18px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid transparent;
   border-radius: 999px;
-  background: rgba(255, 253, 248, 0.92);
-  box-shadow: var(--shadow-sm);
+  background: transparent;
+  box-shadow: none;
   transform: translateX(-50%);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  transition: box-shadow 180ms ease, background 180ms ease, border-color 180ms ease;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  transition:
+    background 260ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 260ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 260ms cubic-bezier(0.16, 1, 0.3, 1),
+    backdrop-filter 260ms cubic-bezier(0.16, 1, 0.3, 1),
+    -webkit-backdrop-filter 260ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 [data-theme="dark"] .topbar {
-  background: rgba(17, 24, 39, 0.92);
-  border-color: rgba(255, 255, 255, 0.08);
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
 }
 
+.topbar.topbar-scrolled,
 .topbar-scrolled {
-  background: rgba(255, 253, 248, 0.98);
-  border-color: var(--line);
-  box-shadow: var(--shadow-md);
+  background: rgba(255, 253, 248, 0.82) !important;
+  border: 1px solid rgba(201, 147, 101, 0.28) !important;
+  box-shadow: 0 10px 30px rgba(12, 28, 50, 0.08) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
 }
 
+[data-theme="dark"] .topbar.topbar-scrolled,
 [data-theme="dark"] .topbar-scrolled {
-  background: rgba(17, 24, 39, 0.98);
-  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(9, 22, 38, 0.84) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
 }
 
 .brand {
@@ -3530,7 +3545,6 @@ p {
 }
 
 /* Surfaces and Cards */
-[data-theme="dark"] .topbar,
 [data-theme="dark"] .mobile-dropdown,
 [data-theme="dark"] .contact-form,
 [data-theme="dark"] .contact-card,
@@ -3926,7 +3940,7 @@ p {
   margin: 18px auto clamp(40px, 6vw, 70px);
   border-radius: clamp(24px, 4vw, 38px);
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.95);
+  border: none;
   background:
     radial-gradient(ellipse 65% 55% at 68% 42%, #ffffff 0%, #f1f3f6 45%, #e6e9ef 100%);
   box-shadow:
@@ -3935,7 +3949,7 @@ p {
 }
 
 [data-theme="dark"] .tn-hero {
-  border-color: rgba(255, 255, 255, 0.1);
+  border: none;
   background:
     radial-gradient(ellipse 65% 55% at 68% 42%, #142236 0%, #0c1626 50%, #060c17 100%);
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
@@ -4136,12 +4150,15 @@ p {
 }
 
 .tn-statue-img {
+  border: none !important;
+  outline: none !important;
   object-fit: contain;
   object-position: center bottom;
   filter: drop-shadow(0 20px 45px rgba(10, 25, 45, 0.18));
 }
 
 .tn-statue-fade {
+  display: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -4163,7 +4180,7 @@ p {
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.95);
+  border: none;
   box-shadow: 0 20px 42px rgba(12, 28, 50, 0.1);
   padding: 18px 22px;
   transition: transform 200ms ease, box-shadow 200ms ease;
@@ -4490,7 +4507,7 @@ p {
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.95);
+  border: none;
   box-shadow: 0 10px 24px rgba(12, 28, 50, 0.08);
 }
 
@@ -4567,3 +4584,241 @@ p {
   }
 }
 
+
+/* ─── Pinterest-Inspired Scenic Landscape Footer ────────────────────────────── */
+.footer-scenic {
+  position: relative;
+  width: var(--shell);
+  margin: clamp(70px, 9vw, 110px) auto 24px;
+  border-radius: clamp(28px, 4vw, 42px);
+  overflow: hidden;
+  background: linear-gradient(180deg, #091a2e 0%, #061324 40%, #030a13 100%);
+  color: #ffffff;
+  box-shadow:
+    0 30px 80px rgba(3, 10, 19, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .footer-scenic {
+  background: linear-gradient(180deg, #0b1e35 0%, #06111f 40%, #02070e 100%);
+  box-shadow: 0 35px 90px rgba(0, 0, 0, 0.7);
+}
+
+/* Atmospheric Silhouette Scenic Backdrop */
+.footer-scenic-backdrop {
+  position: relative;
+  width: 100%;
+  height: clamp(140px, 16vw, 220px);
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(20, 50, 79, 0.35) 0%, rgba(9, 26, 46, 0.95) 85%, #061324 100%);
+}
+
+.footer-scenic-svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.footer-scenic-rim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(201, 147, 101, 0.5) 25%, #e2b890 50%, rgba(201, 147, 101, 0.5) 75%, transparent);
+}
+
+/* Pre-footer Callout Banner */
+.footer-scenic-banner {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  margin-top: -60px;
+  padding: 0 clamp(28px, 5vw, 56px) 36px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-scenic-banner-copy {
+  max-width: 640px;
+}
+
+.footer-scenic-banner-copy h2 {
+  margin: 0 0 10px;
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2.3vw, 1.85rem);
+  font-weight: 600;
+  line-height: 1.25;
+  color: #ffffff;
+}
+
+.footer-scenic-banner-copy p {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.footer-scenic-banner-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* 4 Categorized Columns with Vertical Hairline Dividers (Pinterest Design) */
+.footer-scenic-columns {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: stretch;
+  padding: clamp(36px, 5vw, 54px) clamp(28px, 5vw, 56px);
+  gap: clamp(24px, 3.5vw, 44px);
+}
+
+.footer-scenic-col {
+  flex: 1;
+  min-width: 0;
+}
+
+.footer-scenic-col-brand {
+  flex: 1.4;
+}
+
+.footer-scenic-col-practice {
+  flex: 1.1;
+}
+
+.footer-scenic-col-firm {
+  flex: 0.9;
+}
+
+.footer-scenic-col-chambers {
+  flex: 1.3;
+}
+
+/* Vertical Hairline Divider between columns */
+.footer-col-divider {
+  width: 1px;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(201, 147, 101, 0.3) 15%, rgba(201, 147, 101, 0.3) 85%, transparent 100%);
+  align-self: stretch;
+}
+
+/* Pinterest Category Header */
+.footer-scenic-heading {
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-scenic-heading span {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ebd5c0;
+}
+
+.footer-scenic-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.footer-scenic-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.91rem;
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  transition: all 160ms ease;
+}
+
+.footer-scenic-bullet {
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: #c99365;
+  opacity: 0.45;
+  transition: all 160ms ease;
+}
+
+.footer-scenic-link:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.footer-scenic-link:hover .footer-scenic-bullet {
+  background: #e2b890;
+  opacity: 1;
+  transform: scale(1.6);
+}
+
+/* Bottom Bar */
+.footer-scenic-bottom {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px clamp(28px, 5vw, 56px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(2, 6, 12, 0.4);
+  font-size: 0.84rem;
+  color: rgba(255, 255, 255, 0.6);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+  .footer-scenic-columns {
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  .footer-col-divider {
+    display: none;
+  }
+
+  .footer-scenic-col-brand,
+  .footer-scenic-col-practice,
+  .footer-scenic-col-firm,
+  .footer-scenic-col-chambers {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .footer-scenic-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-scenic-banner-actions {
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-scenic-col-brand,
+  .footer-scenic-col-practice,
+  .footer-scenic-col-firm,
+  .footer-scenic-col-chambers {
+    flex: 1 1 100%;
+  }
+
+  .footer-scenic-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
