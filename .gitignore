@@ -17,3 +17,5 @@ tmp/
 
 # Operating system and editor files
 .DS_Store
+
+tsconfig.tsbuildinfo
