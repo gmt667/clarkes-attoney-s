@@ -3,8 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, ChevronDown, Facebook, Mail, Phone, Scale } from "lucide-react";
-import { FacebookIcon, WhatsAppIcon } from "@/components/social-icons";
-import { contactEmail, facebookHref, primaryPhoneHref, whatsappHref } from "@/lib/navigation";
+import { FacebookIcon, WhatsAppIcon, InstagramIcon, TwitterXIcon, LinkedInIcon } from "@/components/social-icons";
+import { contactEmail, facebookHref, primaryPhoneHref, whatsappHref, instagramHref, twitterHref, linkedinHref } from "@/lib/navigation";
 import { motion } from "framer-motion";
 
 const chartBars = [
@@ -87,6 +87,8 @@ export function HeroPinterest() {
                 src="/images/attorneys/geoffrey-taumbe.jpg"
                 alt="Geoffrey Mustafa Taumbe Managing Partner"
                 fill
+                sizes="64px"
+                loading="eager"
                 className="tn-deal-thumb-img"
               />
             </div>
@@ -131,6 +133,24 @@ export function HeroPinterest() {
             className="tn-dock-item"
           >
             <FacebookIcon />
+          </a>
+          <a
+            href={instagramHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Clarkes Attorneys Instagram"
+            className="tn-dock-item"
+          >
+            <InstagramIcon />
+          </a>
+          <a
+            href={twitterHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Clarkes Attorneys X"
+            className="tn-dock-item"
+          >
+            <TwitterXIcon />
           </a>
           <a
             href={whatsappHref}
