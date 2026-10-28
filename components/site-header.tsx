@@ -27,6 +27,7 @@ export function BrandLogo({
         alt="Clarkes Attorneys"
         width={56}
         height={56}
+        style={{ height: "auto" }}
         className={className}
       />
     );
@@ -39,6 +40,7 @@ export function BrandLogo({
         alt="Clarkes Attorneys"
         width={360}
         height={96}
+        style={{ height: "auto" }}
         className={className}
         priority
       />
@@ -52,6 +54,7 @@ export function BrandLogo({
         alt="Clarkes Attorneys"
         width={360}
         height={96}
+        style={{ height: "auto" }}
         className={className}
         priority
       />
@@ -65,6 +68,7 @@ export function BrandLogo({
         alt="Clarkes Attorneys"
         width={360}
         height={96}
+        style={{ height: "auto" }}
         className={`${className ? `${className} ` : ""}brand-logo-theme-light`}
         priority
       />
@@ -73,6 +77,7 @@ export function BrandLogo({
         alt="Clarkes Attorneys"
         width={360}
         height={96}
+        style={{ height: "auto" }}
         className={`${className ? `${className} ` : ""}brand-logo-theme-dark`}
         priority
       />
@@ -225,8 +230,12 @@ export function SiteHeader() {
           </div>
         </nav>
 
-        {/* Right controls: theme toggle + mobile menu button */}
+        {/* Right controls: consultation pill + theme toggle + mobile menu button */}
         <div className="topbar-controls">
+          <Link href="/contact" className="topbar-consult-btn">
+            <span>Consultation</span>
+          </Link>
+
           <ThemeToggle />
 
           <button

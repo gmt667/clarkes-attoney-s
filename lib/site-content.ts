@@ -179,6 +179,18 @@ export const supportTeam: SupportTeamMember[] = [
 
 export const galleryImages: GalleryImage[] = [
   {
+    title: "Happy Mother's Day – 15 October Commemoration",
+    category: "Firm Commemoration",
+    image: "/images/gallery/mothers-day-october-15.jpg",
+    orientation: "portrait",
+  },
+  {
+    title: "Honouring Mothers – Love, Strength & Dedication",
+    category: "Firm Commemoration",
+    image: "/images/gallery/mothers-day-tribute.jpg",
+    orientation: "portrait",
+  },
+  {
     title: "Clarkes Attorneys brand identity",
     category: "Firm Identity",
     image: "/images/gallery/clarkes-attorneys-logo-cover.jpg",
