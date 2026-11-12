@@ -13,12 +13,17 @@ assert.ok(htaccess.includes('RewriteRule ^ index.html [L]'));
 assert.ok(htaccess.includes('RewriteRule ^api(?:/|$) - [L]'));
 assert.ok(!index.includes('/src/main.tsx'));
 const inventory = JSON.parse(await readFile('docs/nextjs-inventory.json', 'utf8'));
+const designBaseline = JSON.parse(await readFile('docs/design-baseline-assets.json', 'utf8'));
+for (const [path, hash] of Object.entries(designBaseline.assets)) {
+  const asset = await readFile(join(root, path.slice(7)));
+  assert.equal(createHash('sha256').update(asset).digest('hex'), hash, `Restored design asset changed: ${path}`);
+}
 for (const [path, hash] of Object.entries(inventory.files)) {
   const archived = await readFile(join('legacy/nextjs', path));
   assert.equal(createHash('sha256').update(archived).digest('hex'), hash, `Archive changed: ${path}`);
   if (path.startsWith('public/')) {
     const asset = await readFile(join(root, path.slice(7)));
-    assert.equal(createHash('sha256').update(asset).digest('hex'), hash, `Asset changed: ${path}`);
+    assert.equal(createHash('sha256').update(asset).digest('hex'), designBaseline.assets[path] ?? hash, `Asset changed: ${path}`);
   }
 }
 for (const file of files.filter(file => /\.(js|css)$/.test(file))) {

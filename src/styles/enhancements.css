@@ -1,0 +1,26 @@
+/* Content and controls remain readable independently of reveal animations. */
+[data-theme="dark"] { --muted: #a9b8cc; }
+.page-hero-description { color: var(--ink-soft); }
+.topbar { isolation: isolate; }
+.button svg { flex-shrink: 0; }
+.footer-nav a { font-size: 1rem; padding-block: 4px; }
+.footer-contact-list span { overflow-wrap: anywhere; }
+.form-service-status { padding: 14px 16px; border: 1px solid var(--line-strong); border-radius: 12px; background: var(--bg-soft); }
+.form-service-status p, .form-service-status small { color: var(--ink-soft); }
+.form-service-status p + p { margin-top: 8px; }
+.form-service-status a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+.contact-form button:disabled { opacity: 0.65; cursor: not-allowed; }
+.profile-trigger { display: inline-flex; align-items: center; gap: 8px; width: fit-content; margin-bottom: 18px; padding: 8px 0; border: 0; background: transparent; color: var(--blue); font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+.gallery-open { position: relative; display: block; padding: 0; border: 0; background: var(--panel); cursor: zoom-in; }
+.detail-dialog { width: min(680px, calc(100% - 32px)); max-height: 90dvh; margin: auto; padding: 0; border: 1px solid var(--line-strong); border-radius: 20px; background: var(--panel); color: var(--ink); box-shadow: var(--shadow-lg); }
+.detail-dialog::backdrop { background: rgba(4, 12, 24, 0.85); }
+.detail-dialog-content { padding: clamp(18px, 3vw, 32px); }
+.detail-dialog-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
+.detail-dialog-header h2 { font-size: clamp(1.3rem, 3vw, 1.8rem); margin: 0; }
+.detail-dialog p { color: var(--ink-soft); margin-bottom: 18px; }
+.dialog-close { display: grid; place-items: center; flex-shrink: 0; width: 44px; height: 44px; border: 1px solid var(--line-strong); border-radius: 50%; background: var(--panel); color: var(--ink); }
+.image-lightbox { width: min(1200px, calc(100% - 24px)); }
+.lightbox-image { position: relative; width: 100%; height: min(65dvh, 800px); margin-bottom: 16px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

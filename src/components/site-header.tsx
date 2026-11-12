@@ -48,12 +48,9 @@ export function SiteHeader() {
       {navLinks.map(item => <NavLink key={item.href} to={item.href} end={item.href === '/'} className={({ isActive }) => `nav-link${isActive ? ' nav-link-active' : ''}`}>
         {({ isActive }) => <><span>{item.label}</span>{isActive ? <span className="nav-active-pill" /> : null}</>}
       </NavLink>)}
-      <div className="nav-contact" aria-label="Contact shortcuts">
-        <a className="nav-contact-link nav-contact-call" href={primaryPhoneHref} aria-label="Call Clarkes Attorneys"><Phone size={16} /></a>
-        <a className="nav-contact-link nav-contact-email" href={`mailto:${contactEmail}`} aria-label="Email Clarkes Attorneys"><Mail size={16} /></a>
-      </div>
     </nav>
     <div className="topbar-controls">
+      <Link to="/contact" className="topbar-consult-btn"><span>Consultation</span></Link>
       <button className="theme-toggle" type="button" onClick={toggleTheme} aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}>{theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}</button>
       <button ref={toggle} type="button" className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-controls="mobile-nav-dropdown" aria-label={menuOpen ? 'Close menu' : 'Open menu'}>{menuOpen ? <X size={22} /> : <Menu size={22} />}</button>
     </div>

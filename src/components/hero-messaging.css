@@ -1,0 +1,29 @@
+/* Scoped to the homepage hero. The original statue, stage and controls stay put. */
+.hero-establishment { display: flex; flex-direction: column; gap: 8px; margin-bottom: 22px; color: var(--ink-soft); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; }
+.hero-journey { font-size: 0.7rem; letter-spacing: 0.025em; font-weight: 400; }
+.hero-journey-year { display: inline-block; min-width: 10ch; margin-left: 8px; font-variant-numeric: tabular-nums; letter-spacing: 0; }
+.hero-journey-return { animation: hero-journey-settle 350ms ease both; }
+.hero-journey-paused .hero-journey-year { animation-play-state: paused; }
+@keyframes hero-journey-settle { from { opacity: 0.55; } to { opacity: 1; } }
+.tn-hero-headline.hero-rotating-headline { display: grid; width: min(760px, calc(100vw - 180px)); max-width: none; text-align: left; font-family: var(--font-display), Georgia, serif; font-weight: 600; font-size: clamp(2.4rem, 4.4vw, 4rem); line-height: 1.12; letter-spacing: -0.015em; margin-left: 0; margin-bottom: 0; }
+.hero-headline-slide { grid-area: 1 / 1; align-self: start; opacity: 0; transform: translateY(2px); transition: opacity 600ms ease, transform 600ms ease; pointer-events: none; text-wrap: balance; }
+.hero-headline-slide.is-current { opacity: 1; transform: translateY(0); }
+.hero-headline-ink { background: transparent; }
+.hero-headline-accent { color: var(--gold-hover, var(--gold)); }
+[data-theme="dark"] .hero-headline-accent { color: #f7d5b8; }
+.hero-accessible-heading { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.hero-motion-toggle { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; margin: 4px 0 12px; padding: 6px 0; border: 0; background: transparent; color: var(--ink-soft); font-size: 0.72rem; text-decoration: underline; text-underline-offset: 3px; }
+.hero-motion-paused .hero-headline-slide { transition: none; }
+@media (max-width: 900px) {
+  .tn-hero-headline.hero-rotating-headline { width: 100%; max-width: 100%; font-size: clamp(2rem, 5.8vw, 3.3rem); }
+  .hero-headline-ink { background: transparent; padding: 0; }
+}
+@media (max-width: 480px) {
+  .tn-hero-headline.hero-rotating-headline { font-size: clamp(1.85rem, 7.5vw, 2.4rem); line-height: 1.13; }
+  .hero-establishment { font-size: 0.64rem; letter-spacing: 0.055em; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-journey-year { animation: none; }
+  .hero-headline-slide { transition: none; transform: none; }
+  .hero-rotating-headline { margin-bottom: 20px !important; }
+}

@@ -81,7 +81,8 @@ to be tested on the configured host before enabling the form.
 All original public routes, article text, team members, gallery and local images
 are retained. Dark mode, native profile/gallery dialogs, a keyboard-accessible
 menu and readable fallback contact options are included. The homepage uses the
-requested centred serif heading and a restrained accent phrase.
+restored Lady Justice composition and original font, with a modest heading-only
+alignment and width refinement. See [restoration details](docs/DESIGN_RESTORATION.md).
 
 ## Structure and migration evidence
 

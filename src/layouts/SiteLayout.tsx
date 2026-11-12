@@ -19,7 +19,7 @@ export function SiteLayout() {
   return <>
     <Seo />
     <a className="skip-link" href="#main-content">Skip to content</a>
-    <div className={`site-shell ${pathname === '/' ? 'home-reference-shell' : 'inner-page'}`}>
+    <div className={`site-shell${pathname === '/' ? '' : ' inner-page'}`}>
       <SiteHeader />
       <main id="main-content" tabIndex={-1}><Outlet /></main>
       <SiteFooter />

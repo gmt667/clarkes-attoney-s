@@ -1,5 +1,9 @@
 # Clarkes Attorneys: Next.js to Vite migration
 
+The design described in this historical migration report has been superseded by
+the source-based restoration in [DESIGN_RESTORATION.md](DESIGN_RESTORATION.md).
+That report records the recovered original baseline, focused changes and limits.
+
 Repository: https://github.com/gmt667/clarkes-attoney-s
 
 Work is isolated on `migration/vite-react`. Existing uncommitted work was
