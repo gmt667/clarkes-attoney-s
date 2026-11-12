@@ -1,32 +1,41 @@
 {
   "name": "clarkes-attorneys-site",
+  "version": "1.0.0",
   "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
-    "dev": "next dev -H 0.0.0.0",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src scripts vite.config.ts eslint.config.js",
+    "test": "vitest run",
+    "test:build": "node scripts/verify-dist.mjs",
+    "test:contact-backend": "node scripts/test-contact-php.mjs"
   },
   "dependencies": {
-    "@prisma/adapter-pg": "^7.9.0",
-    "@prisma/client": "^7.9.0",
-    "@sanity/image-url": "^1.2.0",
-    "@sanity/vision": "^5.31.2",
-    "dotenv": "^17.4.2",
-    "framer-motion": "^12.42.2",
-    "lucide-react": "^1.25.0",
-    "next": "^16.3.4",
-    "pg": "^8.22.0",
-    "prisma": "^6.12.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "resend": "^6.18.0",
-    "sanity": "^5.14.1",
-    "zod": "^4.4.3"
+    "react-router-dom": "^7.0.0",
+    "lucide-react": "^1.25.0"
   },
   "devDependencies": {
-    "@types/node": "20.17.6",
-    "@types/react": "19.2.17",
-    "typescript": "5.8.2"
+    "vite": "^7.0.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "^5.8.2",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.0.0",
+    "@eslint/js": "^9.0.0",
+    "typescript-eslint": "^8.0.0",
+    "eslint-plugin-react-hooks": "^7.0.0",
+    "vitest": "^3.0.0",
+    "jsdom": "^26.0.0",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.0.0"
   }
 }

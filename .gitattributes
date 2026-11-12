@@ -1,0 +1,8 @@
+* text=auto eol=lf
+# The archive and original assets are hash-verified byte for byte across platforms.
+legacy/nextjs/** -text -whitespace
+public/** -text -whitespace
+*.png -text
+*.jpg -text
+*.pdf -text
+*.zip -text

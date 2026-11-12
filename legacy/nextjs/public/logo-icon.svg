@@ -1,0 +1,16 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Clarkes Attorneys logo mark">
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M128 162H384" stroke="#E0A35E" stroke-width="16"/>
+    <path d="M256 162V370" stroke="#E0A35E" stroke-width="16"/>
+    <path d="M182 162L146 308C146 324.569 177.13 338 216 338C254.87 338 286 324.569 286 308L250 162" stroke="#E0A35E" stroke-width="16"/>
+    <path d="M330 162L294 308C294 324.569 325.13 338 364 338C402.87 338 434 324.569 434 308L398 162" transform="translate(-48 0)" stroke="#E0A35E" stroke-width="16"/>
+    <path d="M256 112L306 162L256 210L206 162L256 112Z" stroke="#E0A35E" stroke-width="16"/>
+    <path d="M176 126L150 162" stroke="#E0A35E" stroke-width="16"/>
+    <path d="M336 126L362 162" stroke="#E0A35E" stroke-width="16"/>
+    <path d="M256 210V388" stroke="#E0A35E" stroke-width="16"/>
+    <path d="M256 388L230 342H282L256 388Z" fill="#E0A35E" stroke="#E0A35E" stroke-width="16"/>
+    <path d="M158 338C188 372 220 388 256 388C292 388 324 372 354 338" stroke="#E0A35E" stroke-width="16"/>
+    <circle cx="150" cy="162" r="16" stroke="#E0A35E" stroke-width="16"/>
+    <circle cx="362" cy="162" r="16" stroke="#E0A35E" stroke-width="16"/>
+  </g>
+</svg>

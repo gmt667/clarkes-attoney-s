@@ -4,12 +4,19 @@ node_modules/
 # Next.js build output
 .next/
 out/
+dist/
+artifacts/
+server/php/clarkes-private/contact-config.php
+server/php/clarkes-private/rate-limits.json
+*.tsbuildinfo
 
 # Environment files
 .env
 .env.local
 .env.production
 .env.*.local
+.env.*
+!.env.example
 
 # Scratch and debug files
 tmp/

@@ -1,0 +1,3 @@
+Options -Indexes -MultiViews
+RewriteEngine On
+RewriteRule ^contact/?$ contact.php [L]

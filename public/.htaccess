@@ -1,0 +1,14 @@
+Options -MultiViews
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  # The API is a separate service; never rewrite API or missing assets to HTML.
+  RewriteRule ^api(?:/|$) - [L]
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+  RewriteRule \.[a-zA-Z0-9]{1,10}$ - [L]
+  RewriteRule ^ index.html [L]
+</IfModule>
